@@ -1,19 +1,14 @@
 package app.plantdiary.individualassignment3048q
 
+import app.plantdiary.individualassignment3048q.dto.Country
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import app.plantdiary.individualassignment3048q.ui.main.MainViewModel
 import org.junit.Test
-
 import org.junit.Assert.*
 import org.junit.Before
 import org.junit.Rule
 import org.junit.rules.TestRule
 
-/**
- * Example local unit test, which will execute on the development machine (host).
- *
- * See [testing documentation](http://d.android.com/tools/testing).
- */
 class CountryUnitTest {
 
     @get:Rule
@@ -28,7 +23,10 @@ class CountryUnitTest {
 
     @Test
     fun countryDTO_maintainsState() {
-        var country = Country("NZ", "New Zealand")
+        var country = Country(
+            "NZ",
+            "New Zealand"
+        )
         assertTrue(country.code.equals("NZ") )
         assertTrue(country.name.equals("New Zealand"))
     }
@@ -54,7 +52,6 @@ class CountryUnitTest {
             assertTrue(it.size > 0)
         }
     }
-
 
     @Test
     fun countryDTO_containsBelize() {
